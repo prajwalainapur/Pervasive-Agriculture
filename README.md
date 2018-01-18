@@ -18,3 +18,4 @@ Start MongoDB server.
   <ul>
 Open browser and type "localhost/users" and our project is up!
   </ul>
+</li>
