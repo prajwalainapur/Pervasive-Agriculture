@@ -16,6 +16,6 @@ Now run "node test.js". This will start the project
 Start MongoDB server.
   </ul>
   <ul>
-Open browser and type "localhost/users" and our project is up!
+Open browser and type "localhost:8000/users" our Project is up!
   </ul>
 </li>
