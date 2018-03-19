@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0" >
+  <meta name="description" content="Fertilizer Prediction">
+  <meta name="author" content="Mayank Singh">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+  <link href="{{ url_for('static',filename='login2_js.js') }}" rel="stylesheet" media="screen">
+  <script type="text/javascript" href="{{ url_for('static',filename='bootstrap.min.js') }}" rel="stylesheet" media="screen"> </script>
+
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/login2_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/index_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/indexstyle.css') }}" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Precision Farming</a>
+    </div>
+     <ul class="nav navbar-nav">
+      <li id="nav1"><a href="/users/index">Home</a></li>
+      <li id="nav2"><a href="/users/logs">Logs</a></li>
+      <li id="nav3"><a href="/users/graph">Graphs</a></li>      
+    </ul>
+    
+ </nav>
+ </div>
+
+    
+
+<div class="container">
+  <h3><i class="fa fa-list-ul" aria-hidden="true" style="margin:4px"></i>Statistics</h3>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+    
+	
+<!-- <div class="container footer"><i class="fa fa-copyright pull-center" aria-hidden="true" style="margin:3px"></i>NONE</div> -->
+</body>
+</html>

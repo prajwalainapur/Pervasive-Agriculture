@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width , initial-scale=1.0" >
+  <meta name="description" content="Fertilizer Prediction">
+  <meta name="author" content="Mayank Singh">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+  <link href="{{ url_for('static',filename='login2_js.js') }}" rel="stylesheet" media="screen">
+  <script type="text/javascript" href="{{ url_for('static',filename='bootstrap.min.js') }}" rel="stylesheet" media="screen"> </script>
+
+  <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  <link href="{{ url_for('static',filename='styles/bootstrap.min.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/login2_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/index_css.css') }}" rel="stylesheet" media="screen">
+  <link href="{{ url_for('static',filename='styles/indexstyle.css') }}" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<div class="container">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Precision Farming</a>
+    </div>
+     <ul class="nav navbar-nav">
+      <li id="nav1"><a href="/users/index">Home</a></li>
+      <li id="nav2"><a href="/users/logs">Logs</a></li>
+      <li id="nav3"><a href="/users/graph">Graphs</a></li>      
+    </ul>
+    
+ </nav>
+ </div>
+
+    
+
+<div class="container-fluid">
+
+{% if crop=="TOMATO" %}  
+
+  <center>
+    <img src="{{url_for('static', filename='tomato.jpg')}}" class="img-rounded" width="304" height="236">
+  </center>
+  <div class="well container-fluid">
+    <div class="col-right" style="padding-left:0px;"><h2>Tomato Cultivation Guide</h2></div>
+   <!--  <tr>
+      <td width="100%"> -->
+        <div class="row content">
+          <div class="row space-clear container-fluid">
+            <h2><a name="climate"></a> Climatic Requirements</h2>
+            <p>Tomato is a warm season crop, it requires warm and
+            cool climate. The plants cannot withstand frost and high humidity. Also
+            light intensity affects pigmentation, fruit colour, fruit set. The plant
+            is highly affected by adverse climatic conditions. It requires different
+            climatic range for seed germination, seedling growth, flower and fruit
+            set, and fruit quality. Temperature below 10<sup>0</sup>C and above 38<sup>0</sup>C
+            adversely affects plant tissues thereby slow down physiological
+            activities. It thrives well in temperature 10<sup>0</sup>C to 30<sup>0</sup>C
+            with optimum range of temperature is 21-24<sup>0</sup>C. The mean
+            temperature below 16<sup>0</sup>C and above 27<sup>0</sup>C are not
+            desirable. The plant doesn’t withstand frost, it requires low to
+            medium rainfall, and does well under average monthly temperature of 21
+            to 23<sup>0</sup>C. Avoid water stress and long dry period as it causes
+            cracking of fruits. Bright sunshine at the time of fruit set helps to
+            develop dark red coloured fruits.</p>
+          </div>
+        <div class="row space-clear container-fluid">
+          <h2><a name="termerature"></a> Temperature Requirement</h2>
+          <table class="table table-bordered">
+            <tr>
+              <td>Sr.<br> No.</td>
+              <td ROWSPAN="2">Stages</td>
+              <td COLSPAN="3">Temperature (<sup>0</sup>C)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>Minimum</td>
+              <td>Suitable</td>
+              <td>Maximum</td>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Seed germination</td>
+              <td>11</td>
+              <td>16-29</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Seedling growth</td>
+              <td>18</td>
+              <td>21-24</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td ROWSPAN="2">3.</td>
+              <td ROWSPAN="2">Fruit set (day)<br>
+                (night)
+              </td>
+              <td>10</td>
+              <td>15-17</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td>20-24</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>Red colour development</td>
+              <td>10</td>
+              <td>20-24</td>
+              <td>30</td>
+            </tr>
+          </table>
+        </div>
+        <div class="row space-clear container-fluid">
+          <h2><a name="Soil Requirement"></a>Soil Requirement</h2>        
+          <p>Tomatoes do very well on most mineral soils, but they
+          prefer deep, well drained sandy loams. Upper layer of soil should be
+          porous with little sand and good clay in the subsoil. Soil depth 15 to
+          20cm proves to be good for healthy crop. Deep tillage can allow for
+          adequate root penetration in heavy clay type soils, which allows for
+          production in these soil types.<br /><br />Tomato is a moderately tolerant crop to a wide pH
+          range. A pH of 5.5- 6.8 is preferred. Though tomato plants will do well
+          in more acidic soils with adequate nutrient supply and availability.
+          Tomato is moderately tolerant to acid an soil that is pH of 5.5. The
+          soils with proper water holding capacity, aeration, free from salts are
+          selected for cultivation.<br /><br />Soils extremely high in organic matter are not
+          recommended due to the high moisture content of this media and nutrient
+          deficiencies. But, as always, the addition of organic matter to mineral
+          soils will increase yield.</p></div>
+          <div class="row space-clear container-fluid">
+          <h2><a name="Choice"></a>Choice of seeds</h2>
+          <p>After seed production, diseased, broken seeds are
+          discarded. The seeds for sowing should be free from inert matter. Early
+          germinating, bold, uniform in shape and size, seeds are selected for
+          sowing. Hybrid seeds from F1 generation are advantageous for sowing as
+          it gives early and high yield uniform fruity, resistant to adverse
+          environmental conditions.</font></p>
+          <strong>a) Seed and sowing</strong>
+          <p>Tomato is generally cultivated by transplanting
+          seedlings on ridges and furrows. At the time of transplanting seedlings
+          are harder by exposing to open weather or by withholding irrigation. A
+          seed rate of 400 to 500g/ha is required.</p>
+          <p>Seeds are treated with Thiram @ 3g/kg of seed to
+          protect from seed born diseases. Seed treatment with B. naphthoxyacetic
+          acid (BNOA) at 25 and 50 ppm, gibberllic acid (GA3) at 5-20 ppm and
+          chlorophenoxy acetic at 10 and 20 ppm was found to improve the growth
+          and yield of tomato.</p>
+          <p>Seeds are sown in June July for autumn winter crop
+          and for spring summer crop seeds are sown in November. In the hills seed
+          is sown in March April. The spacing recommended for the autumn winter
+          crop is 75 x 60cm and for spring summer crop 75 x 45cm.</p>
+        </div>
+        <div class="row space-clear container-fluid">
+          <h2><a name="Nursery Preparation"></a>Nursery Preparation and Care</h2>
+                     <p style="text-align:center"><img border="0" src="https://www.indiaagronet.com/tomato/resources/images/zari.gif" width="25%" height="193"></p>
+                     <p>The ideal seedbed should be 60cm wide, 5-6cm long and
+          20-25cm high. Clods and stubbles should be removed from the seedbed. Add
+          sieved FYM and fine sand on the seedbed. Bring them to fine tilth.
+          Drench the bed with Fytolon/Dithane M-45 @ 2-2.5 g/lit of water. Draw
+          the lines 10 to 15cm apart throughout the length of the seedbed. Sow the
+          seeds thinly spaced in lines, press gently, cover with fine sand and
+          then cover the bed with straw. Irrigate with rose can. Irrigate the
+          seedbed twice a day till the seeds germinate. Remove the straw after the
+          seeds germinate. Apply a little Thimet at 4-5 leaf stage. Spray the
+          seedlings with Metasystox/Thiodan @ 2-2.5 ml/lit water and Dithane M-45
+          @ 2-2.5 g/lit water.</p>
+        </div>
+        <div class="row space-clear container-fluid">
+          <h2><a name="Fertilizers"></a>Fertilizers</h2>
+          <p>As the fruit production and quality depends upon
+          nutrient availability and fertilizer application so balance fertilizer
+          are applied as per requirement. The nitrogen in adequate quantity
+          increases fruit quality, fruit size, color and taste. It also helps in
+          increasing desirable acidic flavor. Adequate amount of potassium is also
+          required for growth, yield and quality. Mono Ammonium Phosphate (MAP)
+          may be used as a starter fertilizer to supply adequate phosphorus during
+          germination and seedling stages. Calcium availability is also very
+          important to control soil pH and nutrient availability. Sandy soils will
+          require a higher rate of fertilizer, and more frequent applications of
+          these fertilizers due to increased leaching of essential nutrients. The
+          seedlings are sprayed with starter solution of micronutrient. Before
+          planting farm yard manure @ 50 ton per hectares should be incorporated.
+          Normally tomato crop requires 120kg Nitrogen (N), 50kg Phosphorus (P<sub>2</sub>O<sub>5</sub>),
+          and 50kg Potash (K<sub>2</sub>O). Nitrogen should be given in split
+          doses. Half nitrogen and full P<sub>2</sub>O<sub>5</sub> is given at the
+          time of transplanting and remaining nitrogen is given after 30 days and
+          60 days of transplanting.</p>
+          <p>Soil and tissue analyses should be taken throughout
+          the growing and production season to insure essential nutrients are in
+          their proper amounts and ratios. Tissue analysis of a nutritionally
+          sufficient plant will show the following nutrient status:</p>
+          <table Class="table table-bordered">
+            <tr>
+              <td></td>
+              <td>Nitrogen</td>
+              <td>Phosphorus</td>
+              <td>Potassium</td>
+              <td>Calcium</td>
+              <td>Magnesium</td>
+              <td>Sulphur</td>
+            </tr>
+            <tr>
+              <td>%</td>
+              <td>4.0-5.6</td>
+              <td>0.30-0.60</td>
+              <td>3.0-4.5</td>
+              <td>1.25-3.2</td>
+              <td>0.4-0.65</td>
+              <td>0.65-1.4</td>
+            </tr>
+              <td ROWSPAN="3">&nbsp;</td>
+            <tr>
+              <td>ppm</td>
+              <td>Manganese</td>
+              <td>Iron</td>
+              <td>Boron</td>
+              <td>Copper</td>
+              <td>Zinc</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>30-400</td>
+              <td>30-300</td>
+              <td>20-60</td>
+              <td>5-15</td>
+              <td>30-90</td>
+            </tr>
+          </table>
+          <p>In the present situation it has been realized that
+          the use of inorganic fertilizers should be integrated with renewable and
+          environmental friendly organic fertilizers, crop residues and green
+          manures.</p>
+        </div>
+        <div class="row space-clear container-fluid">
+          <h2><a name="Irrigation"></a> Irrigation</h2>
+          <p style="text-align:center;"><img border="0" src="https://www.indiaagronet.com/tomato/resources/images/dripirrigationsystem.gif" width="45%" height="317"></p>
+          <p>Tomatoes have been observed to withdraw water from
+          depths up to 13 feet in a well structured soil. Tomato plants require
+          adequate moisture throughout their growth period. First irrigation is
+          required soon after seedlings are transplanted. Frequent water is
+          necessary in root zone when plants are small. In summer irrigation at
+          intervals of 3-4 days and 10-15 days water is necessary to maintain wet
+          soil. Erratic moisture conditions can cause radial and concentric
+          cracking on fruit.</p>
+        </div>
+        <div class="row space-clear">
+          <h2><a name="Implements"></a>Implements for Interculturing Operations</h2>
+          <div>
+            <table class="table table-bordered">
+              <tr>
+                <td width="33%" align="center"><img border="0" src="https://www.indiaagronet.com/tomato/resources/images/weedinghook.gif" width="90%" height="106"></td>
+                <td width="33%" align="center"><img border="0" src="https://www.indiaagronet.com/tomato/resources/images/Ghamela%20&%20Spade.gif" width="100%" height="163"></td>
+                <td width="34%" align="center"><img border="0" src="https://www.indiaagronet.com/tomato/resources/images/toothhoe.gif" width="90%" height="79"></td>
+              </tr>
+            </table>
+          </div>
+          <p>Generally interculturing operations like hand hoeing,
+          weeding, mulching, staking is followed in tomato. Implements like
+          hand-hoe, khurpi, land leveller etc. are used.</p>
+        </div>
+        <div class="row space-clear container-fluid">
+          <h2><a name="Inter"></a> Inter Culture Operations</h2>
+          <p>Pre-emergence applications of herbicides like
+          metribuzin at 0.35 kg/ha, fluchloralin 1.25 kg/ha has been found
+          effective to increase the tomato yield significantly in comparison to
+          traditional method of hand weeding. Also plastic mulching (black or
+          transparent) can be used to control the weeds. Weeds can be controlled
+          successfully by mulching plus use of herbicides (pendimethalin @ 0.75kg
+          ai/ha or oxyflorophen @ 0.12kg ai/ha).</p>
+          <p>Spraying of PCPA at 50 ppm, IAA at 50 ppm or borax 1%
+          gave the fruit set in summer season. PCPA spray at flowering stage was
+          observed to create favorable conditions for fruit set in low as well as
+          high temperatures.</p>
+        </div>
+        
+        <div class="row space-clear container-fluid">
+          <h2><a name="Staking"></a> Staking of Tomato</h2>
+          <p style="text-align:center">
+          <img border="0" src="https://www.indiaagronet.com/tomato/resources/images/stackingtomato.gif" width="45%" height="279">
+          <p>Due to staking there is better growth of tomato plant
+          and branches, increased fruit bearing, and improved quality of fruits.
+          Cultural operations like fruit picking, spraying, weeding, fertilisers
+          application and earthing up etc. for staking can be done by two methods.
+          In first type, at each plant sticks of 1.5-2meter length and 2.5cm
+          thickness are placed and plant of tomato is staked as it is growing. In
+          second type, a network of wire and bamboo is form and with the help of
+          sutali (small rope) branches of plant is spread. Secondary branches
+          should be cut upto 30 cm and from 30 cm height keeping two main branches
+          plant should be allow to spread on this network.&nbsp;</p>
+        </div>
+        
+        <div class="row space-clear container-fluid">
+        <h2><a name="Intercropping"></a>Intercropping</h2>
+        <p align="center">
+        <img border="0" src="https://www.indiaagronet.com/tomato/resources/images/intercropping.gif" width="50%" height="233">
+        <p>Tomato is well fitted in different cropping systems
+        of cereals, grains, pulses and oilseeds. Cropping systems rice-tomato,
+        rice-maize, okra-potato-tomato, tomato-onion are popular in various
+        parts of India. Cauliflower- okra –sunflower –cabbage –tomato –maize
+        -tomato-watermelon and paddy-peas-tomato have been proved economical
+        systems. Palak or radish can be grown as inter-crop in tomato
+        successfully.</p></div>
+
+    </div>
+<!--   </td>
+</tr> -->
+</div>
+</div>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+{% if crop=="GARLIC" %}
+ 
+<div class="container-fluid">
+<center>
+    <img src="{{url_for('static', filename='garlic.jpg')}}" class="img-rounded" width="304" height="236" style="padding-bottom:1em ">
+  </center>
+<div class="container-fluid well">
+
+<table border="0" cellspacing="0" width="100%" cellpadding="8">
+  <tr>
+    <td width="82%" rowspan="2" valign="top">
+    <div class="content">
+    <h1><a name="top"></a>Spices &amp; Condiments: Garlic</h1><br>
+    <p align="justify"><font face="sans serif, verdana, arial" size="2"><b>Introduction </b></font></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Garlic, a native of
+    Southern Europe is one of the important bulb crops grown and used as a spice or condiment
+    throughout India. Gujarat followed by Orissa are the largest producing states. It
+    possesses a high natritive value, its preparations are administered as a cure against
+    stomach disease, sore eyes and ear ache. It is commonly used in the preparation of various
+    dishes. Allicin, the principle amoebic dysentry and is also having many other medicinal
+    properties.</font></p>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Climate and Soil</font></b></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">It is grown under a
+    wide range of climatic conditions. However, it cannot stand too hot or too cold weather.
+    It prefers moderate temperature in summer as well as in winter. Short days are very
+    favourable for the formation of bulbs. It can be grown well at elevations of 1000 to 1300
+    m above MSL. Garlic requires well drained loamy soils, rich in humus, with fairly good
+    content of potash. The crop raised on sandy or loose soil does soils, the bulbs produced
+    are deformed and during harvesting, many bulbs are broken and bruised and so they do not
+    keep well in storage.</font></p>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Varieties </font></b></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">There is no distinct
+    variety of garlic. Local varieties are either white in colour and have fairly big bulbs
+    with a better keeping quality and a higher yield or red in colour with pungency. Tamil
+    Nadu Agricultural University has recently released one improved variety by clonal
+    selection viz., Ooty 1 Garlic. It is a high yielder (17t/ha) with a shorter duration of
+    120 to 130 days. The bulbs are big sized weighing 20 to 30g and each bulb has 22 to 25
+    cloves, which are dull white in colour.</font></p>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Propagation </font></b></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Garlic is propagated
+    by cloves. All the cloves are planted except the long slender once in the centre of the
+    bulb. Bulbs with side growth should be discarded. Healthy cloves or bulbils free from
+    disease and injuries should be used for sowing and about 150 to 200 kg cloves are required
+    to plant one hectare. They are sown by dibbling or furrow planting. </font></p>
+    <ul>
+      <b>
+      <li><p align="justify"></b><font face="sans serif, verdana, arial" size="2">Dibbling: The
+        field is divided into small plots convenient for irrigation Cloves may be dibbled 5 to
+        7.5cm deep, keeping their growing ends upwards. They are laced 7.5cm apart from each other
+        in rows of 15cm apart and then they are covered with loose soil. June-July and
+        October-November are the normal planting seasons for garlic.</font></p>
+      </li>
+    </ul>
+    <ul>
+      <li><p align="justify"><font face="sans serif, verdana, arial" size="2">Furrow planting: The
+        furrows are made 15 cm with hand how or a cotton drill. In these furrows, cloves are
+        dropped by hand 7.5 to 10 cm apart. They are covered lightly with loose soil and a light
+        irrigation is given. </font></p>
+      </li>
+    </ul>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Manures and
+    fertilisers</font></b></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">About 25 tonnes of
+    farm yard manure is applied as a basal dose along with 60kg Nitrogen and 50 kg in each of
+    Phosphorus and Potash. Forty five days after planting 60kg Nitrogen is applied again as
+    top dressing.</font></p>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Irrigation</b> </font></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">First irrigation is
+    given after sowing and then field is irrigated every 10 to 15 days depending upon the soil
+    moisture availability. There should not be any scarcity of moisture in the growing season,
+    otherwise, the development of the bulbs will be affected. The last irrigation should be
+    given 2 to 3 before harvesting for making it easy without damaging the bulbs. In South
+    India hills, they are mostly grown as a rainfed crop.</font></p>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Intercultural
+    operations</b> </font></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">First interculture is
+    given with hand hoe one month after sowing. Second weeding is given one month after the
+    first (about two and half months from sowing) loosens the soil and helps in the setting of
+    bigger and well filled bulbs. The crop should not be weeding out or hoed at a later stage
+    because this may damage the stem and impair the keeping quality. </font></p>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Harvesting </font></b></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Garlic is a crop of 4
+    ½ to 5 months duration. When the leaves start turning yellowish or brownish and show
+    signs of drying up, the crop is ready for harvest. The plants are then pulled out or
+    uprooted with a country plough and are tied into small bundles which are then kept in the
+    field or in the shade or 2-3 days for curing and drying so that the bulbs become hard and
+    their keeping quality is improved. The bulbs may be stored by hanging them on bamboo
+    sticks or by keeping them on dry sand on the market, the dried stalks are removed and
+    bulbs are cleaned. Well cured garlic bulbs can be kept for 1 to 1 ½ months in an ordinary
+    well ventilated room. If dust smoke is given to it, the bulbs can be stored for 8 to 10
+    months. They can also be stored at 32<sup>0</sup>F with 60% R.H. Average yield level is 6
+    to 8 t/ha.</font></p>
+    <b><p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Plant protection</font></b></p>
+    <p ALIGN="JUSTIFY"><font face="sans serif, verdana, arial" size="2">Thrips cause withering
+    of the leaves. Application of methyl demeton 25EC 1 ml/litre will check the incidence.
+    Leaf spot is the most important disease. Spraying Dithane M-45 at fortnightly intervals at
+    2.5g in one litre of water is recommended.</font></p></div></td>
+</div>
+</div>  {% endif%}
+<!-- <div class="container footer"><i class="fa fa-copyright pull-center" aria-hidden="true" style="margin:3px"></i>NONE</div> -->
+</body>
+</html>
