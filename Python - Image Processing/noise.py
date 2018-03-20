@@ -9,7 +9,7 @@ rows,cols = gray.shape
 
 for i in range(0,rows):
 	for j in range(0,cols):
-		if (gray [i,j] > 125 and gray [i,j] < 150):
+		if (gray [i,j] > 125 and gray [i,j] < 150):  #125 and 150 are the threshold values.
 			gray[i,j] = 255
 		else:
 			gray[i,j] = 0
