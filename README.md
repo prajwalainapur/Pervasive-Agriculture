@@ -28,13 +28,13 @@ Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
   <li> run "<b><i> python noise.py </i></b>" -> Required object gets isolated using this script from satellite image </li>
 </ol>
 <h3> For Alert and Agent System  </h3> <br/>
-  <li>
-      <h4> For Windows </h4>
-  </li>
   <ol>
+    <li> Install Python, Flask and Twilio API </li>
     <li> Open the directory </li>
     <li> Open command prompt in the directory </li>
-    <li> Download the dependecies using "<b><i>pip install -r requirements.txt</i></b>" 
+    <li> Download the dependecies using "<b><i>pip install -r requirements.txt</i></b>"</li>
+    <li> Run "<b><i>python manage.py runserver</i></b>"</li>
+    <li> Open browser and type "<b>localhost:5000/</b>"</li>
 </ol>
 <h2><b>Services provided:</b></h2><hr/>
 The Web application majorly consists of four services, namely
@@ -49,7 +49,7 @@ The Web application majorly consists of four services, namely
 <h2><b>Implementation Scope:</b></h2><hr/>
 This could be implemented at the soil health center provided by the government. Thus, besides meansuring the nutritional values of the sample soil, now they would also provide details regarding the best crop.This would also mean that the product could reach every village in the country where farmers use the soil testing centers.
 
-<h2><b>Developers:</b></h2><hr/>
+<h2><b>Developers: </b></h2><hr/>
 <ol><li>
 Mayank Singh</li>
 <li>Prajwal Brijesh Ainapur</li>
