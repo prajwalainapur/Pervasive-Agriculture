@@ -2,7 +2,7 @@
 Providing Machine Learning and Image Processing to the farmers at just a click of button.
 
 <h2><b>Description:</b></h2><hr/>
-The main aim of this project is to help the farmers to earn high revenues at minimal auxillary cost inputs such as fertilizers.
+The thin silver lining that differentiates a innovation from an invention is the fact on how much feasible and impactful it could be. Though India has one of the highest net area under cultivation, it's net output/hectare is far below it's counterparts. The Government of India is striving very hard to bridge this gap and we belive that our app could just provide the break that this plan of government is aiming at. This solution if implemented at the soil health centers which have been set up by the government, could help all the farmers to use minimum fertilizers, so as to maintain the soil health and also would provide them an opportunity to gain the most revenue from the same piece of land. Thus it would be a win-win for all the parties involved. This is provided with the technologies such as Machine Learning and Image Processing. Machine Learning algorithm is used for prediction analysis to suggest the best crop and also the corresponding bio-fertilizer. Image Processing provides a technological base that could be used for further developmental projects in the field of automated drone or tractors as this generates a route through the field with the least number of turns.
 
 <h2><b>Software/Technical Requirements:</b></h2><hr/>
 Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
@@ -47,7 +47,9 @@ The Web application majorly consists of four services, namely
 
 
 <h2><b>Implementation Scope:</b></h2><hr/>
-This could be implemented at the soil health center provided by the government. Thus, besides meansuring the nutritional values of the sample soil, now they would also provide details regarding the best crop.This would also mean that the product could reach every village in the country where farmers use the soil testing centers.
+This could be implemented at the soil health center provided by the government. Thus, besides meansuring the nutritional values of the sample soil, now they would also provide details regarding the best crop.This would also mean that the product could reach every village in the country where farmers use the soil testing centers.<br>
+<p>The project might not be an awesome idea for an young and aspiring engineer, but this surely is a game changer in the field of agriculture and is the need of this hour. Farmers need more revenue to sustain and this provides just that.
+</p>
 
 <h2><b>Developers: </b></h2><hr/>
 <ol><li>
