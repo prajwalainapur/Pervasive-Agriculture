@@ -9,7 +9,7 @@ Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
 
 <h2> Installation Guide </h2>
 <br/>
-<h3> Python UI 2.0 </h3> <br/>
+<h3> For Python UI 2.0 </h3> <br/>
 <ol> 
   <li> Install Flask, Python on your PC. Follow this link if <a href = "http://flask.pocoo.org/docs/0.12/installation/" >required </a> </li>
   <li> Open the directory </li>
@@ -19,6 +19,22 @@ Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
   <li> Open browser [preferably Chrome] and type "<b>localhost:8000/users/index</b>" and our webapp will open </li>
 </ol>
  No need for downloading any other requirements for this<br/>
-
+<h3> For Image Processing </h3> <br/>
+<ol>
+  <li> Install Python, OpenCV [latest version], NumPy on your PC. </li>
+  <li> Open the directory </li>
+  <li> OPen command prompt or terminal in that directory </li>
+  <li> run "<b><i> python united.py </i></b>" -> The object will be isolated </li>
+  <li> run "<b><i> python noise.py </i></b>" -> Required object gets isolated using this script from satellite image </li>
+</ol>
+<h3> For Alert and Agent System  </h3> <br/>
+<ul>
+  <li>
+      <h4> For Windows </h4>
+  </li>
+  <ol>
+    <li> Open the directory </li>
+    <li> Open command prompt in the directory </li>
+    <li> Download the dependecies using "<b><i>pip install -r requirements.txt</i></b>" 
 <h2><b>How to use:</b></h2><hr/>
 The Web application majorly consists of three services, namely
