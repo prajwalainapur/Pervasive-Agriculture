@@ -9,4 +9,5 @@ Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
 
 <h2><b>Installation Procedure:</b></h2><hr/>
 
-<h2><b></b></h2><hr/>
+<h2><b>How to use:</b></h2><hr/>
+The Web application majorly consists of three services, namely
