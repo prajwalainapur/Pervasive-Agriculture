@@ -28,13 +28,16 @@ Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
   <li> run "<b><i> python noise.py </i></b>" -> Required object gets isolated using this script from satellite image </li>
 </ol>
 <h3> For Alert and Agent System  </h3> <br/>
-<ul>
-  <li>
-      <h4> For Windows </h4>
-  </li>
   <ol>
+    <li> Install python and Flask </li>
     <li> Open the directory </li>
     <li> Open command prompt in the directory </li>
-    <li> Download the dependecies using "<b><i>pip install -r requirements.txt</i></b>" 
+    <li> Download the dependecies using "<b><i>pip install -r requirements.txt</i></b>" </li>
+    <li> run "<b><i>python manage.py runserver</b></i>" </li>
+    <li> Open browser and write "localhost:5000/" </li>
+  </ol>
+  <br/>
+  <br/>
+  <hr/>
 <h2><b>How to use:</b></h2><hr/>
 The Web application majorly consists of three services, namely
