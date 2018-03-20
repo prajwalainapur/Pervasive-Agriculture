@@ -1,14 +1,12 @@
 # Pervasive-Agriculture
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="author" content="Benaissa Ghrib" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<li>To deliver modern technologies such as Machine Learning and Image Processing to the farmers at a click of a button.</li>
+Providing Machine Learning and Image Processing to the farmers at just a click of button.
 
-</head>
-<body>
-<div>
-</div>
-</body>
-</html>
+<h2><b>Description:</b></h2><hr/>
+The main aim of this project is to help the farmers to earn high revenues at minimal auxillary cost inputs such as fertilizers.
+
+<h2><b>Software/Technical Requirements:</b></h2><hr/>
+Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
+
+<h2><b>Installation Procedure:</b></h2><hr/>
+
+<h2><b></b></h2><hr/>
