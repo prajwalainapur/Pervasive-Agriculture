@@ -28,7 +28,6 @@ Flask<br>Open CV for Python<br>Twilio API<br>Google Maps API
   <li> run "<b><i> python noise.py </i></b>" -> Required object gets isolated using this script from satellite image </li>
 </ol>
 <h3> For Alert and Agent System  </h3> <br/>
-<ul>
   <li>
       <h4> For Windows </h4>
   </li>
