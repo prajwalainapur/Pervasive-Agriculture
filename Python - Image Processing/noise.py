@@ -2,7 +2,7 @@ import cv2
 import numpy as np
  
 # Read image
-img = cv2.imread("capture.png")
+img = cv2.imread("TestInputNoise.png")
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
    
 rows,cols = gray.shape
