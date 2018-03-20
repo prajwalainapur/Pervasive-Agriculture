@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import math
 
-img = cv2.imread('harris.jpg')
+img = cv2.imread('TestInputUnited.jpg')
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
 
 corners = cv2.goodFeaturesToTrack(gray,50,0.10,1)
@@ -122,6 +122,6 @@ print m,n
 for x in range(0,nett-1):
 	cv2.line(output,(m[x],n[x]),(m[x+1],n[x+1]),(255,255,255),1)
 
-cv2.imwrite("modified.jpg",output)
+cv2.imwrite("TestOutputUnited.jpg",output)
 
 cv2.waitKey(0)
