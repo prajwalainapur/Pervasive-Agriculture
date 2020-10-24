@@ -114,7 +114,7 @@
     "glob-parent": "2.0.0",
     "glob-base": "0.3.0",
     "graceful-fs": "4.1.11",
-    "handlebars": "4.0.10",
+    "handlebars": "4.5.3",
     "function-bind": "1.1.0",
     "har-schema": "2.0.0",
     "has-ansi": "2.0.0",
