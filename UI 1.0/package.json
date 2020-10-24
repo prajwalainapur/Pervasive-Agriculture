@@ -190,7 +190,7 @@
     "lowercase-keys": "1.0.0",
     "mkdirp": "0.5.1",
     "mongodb-core": "2.1.15",
-    "mongodb": "2.2.31",
+    "mongodb": "3.1.13",
     "mongoose": "4.11.9",
     "mpath": "0.3.0",
     "mpromise": "0.5.5",
