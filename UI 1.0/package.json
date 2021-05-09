@@ -38,7 +38,7 @@
     "bcrypt-pbkdf": "1.0.1",
     "brace-expansion": "1.1.8",
     "aws4": "1.6.0",
-    "bson": "1.0.4",
+    "bson": "1.1.4",
     "buffer-shims": "1.0.0",
     "bytes": "2.4.0",
     "boom": "4.3.1",
